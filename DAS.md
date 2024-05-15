@@ -11,6 +11,8 @@ DAS relies on erasure encoding which is a cryptographic method that expands the 
 
 With erasure coding a vector of (k) information chunks gets encoded into a (longer!) vector of  n coded chunks. The _rate_ R=k/n of the code measures the redundancy introduced by the code.
 
+![[coding.png]]
+
 ---
 
 Sources:
