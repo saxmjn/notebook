@@ -35,9 +35,9 @@ Pros for BlobData:
 > Rollups post commitments to their transaction data on-chain and also make the actual data available in data blobs. This means provers can check the commitments are valid or challenge data they think is wrong. At the node-level, the blobs of data are held in the consensus client. The consensus clients attest that they have seen the data and that it has been propagated around the network. If the data was kept forever, these clients would bloat and lead to large hardware requirements for running nodes. Instead, the data is automatically pruned from the node every 18 days. The consensus client attestations demonstrate that there was a sufficient opportunity for provers to verify the data. The actual data can be stored off-chain by rollup operators, users or others.
 
 ---
-#### EIP-4488
+### EIP-4488
 
-Before EIP4844 there was another proposed attempt called EIP-4488. The purpose of EIP4488 was to greatly decreases the gas cost of transaction calldata and simultaneously caps total transaction calldata in a block.
+Before EIP-4844 there was another proposed attempt called EIP-4488. The purpose of EIP-4488 was to greatly decreases the gas cost of transaction CALLDATA and simultaneously caps total transaction CALLDATA in a block.
 
 EIP-4488 did this with two simple rules:
 
@@ -45,6 +45,9 @@ EIP-4488 did this with two simple rules:
 - A limit of 1 MB per block plus an extra 300 bytes per transaction (theoretical max: ~1.4 MB)
 
 ![[Screenshot 2024-05-18 at 2.19.35 PM.png]]
+
+#### Why there was a cap on max CALLDATA per block in EIP-4488?
+Today, the average block size [is 60-90 kB](https://etherscan.io/chart/blocksize), but the _maximum_ block size is `30M / 16 = 1,875,000` bytes (plus about a kilobyte of block and tx overhead). Simply decreasing the calldata gas cost from 16 to 3 would increase the maximum block size to 10M bytes. This would push the Ethereum p2p networking layer to unprecedented levels of strain and risk breaking the network; some previous live tests of ~500 kB blocks a few years ago had already taken down a few bootstrap nodes. So it was viable to cap it to 1.4 worst case block size while preventing most of the security risk.
 
 ---
 
