@@ -42,7 +42,7 @@ EIP-4488 did this with two simple rules:
 - Calldata gas cost reduced from 16 gas per byte to 3 gas per byte
 - A limit of 1 MB per block plus an extra 300 bytes per transaction (theoretical max: ~1.4 MB)
 
-![[Screenshot 2024-05-18 at 2.19.35 PM.png]]
+![table](media/sc-1.png)
 
 > [!info]
 > #### Why there was a cap on max CALLDATA per block in EIP-4488?
