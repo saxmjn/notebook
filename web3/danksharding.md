@@ -16,6 +16,10 @@ Proto-Danksharding, also known as [EIP-4844(opens in a new tab)](https://eips.e
 
 The name comes from the two researchers who proposed the idea: Protolambda and Dankrad Feist.
 
+> ![Info]
+> Conversation b/w Vitalik, Protolambda and Dankrad about Danksharding 
+> https://www.youtube.com/watch?v=N5p0TB77flM
+
 The main feature introduced by proto-danksharding is new transaction type, which we call a **blob-carrying transaction**. Before this, rollups had been limited in how cheap they can make user transactions by the fact that they post their transactions in `CALLDATA`.
 
 Cons of CALLDATA:
