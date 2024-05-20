@@ -43,7 +43,6 @@ Pros for BlobData:
 * Blobs are extremely large (~125Kb) and much cheaper than CALLDATA as it is not competing for gas. 
 * Data in blobs are temporary and are deleted approximately after 4096 epochs (18days ~ 2eeks)
 
----
 > [!info]
 > ##### Why is it OK to delete Blob Data?
 > Rollups post commitments to their transaction data on-chain and also make the actual data available in data blobs. This means provers can check the commitments are valid or challenge data they think is wrong. At the node-level, the blobs of data are held in the consensus client. The consensus clients attest that they have seen the data and that it has been propagated around the network. If the data was kept forever, these clients would bloat and lead to large hardware requirements for running nodes. Instead, the data is automatically pruned from the node every 18 days. The consensus client attestations demonstrate that there was a sufficient opportunity for provers to verify the data. The actual data can be stored off-chain by rollup operators, users or others.
@@ -68,8 +67,13 @@ EIP-4488 did this with two simple rules:
 
 #### Blobs
 
+Blobs are 4096 field-elements of 32 bytes each, with a long term maximum of 16 blobs per block. 4096 * 32 bytes * 16 per block = 2 MiB (One mebibyte equals 1.048576 megabytes) per block maximum. The blob cap per block can start low and grow over multiple network upgrades. Because validators and clients still have to download full blob contents, data bandwidth in proto-danksharding is targeted to 1 MB per slot. 
+
 > [!info]
-> Blobs are 4096 field-elements of 32 bytes each, with a long term maximum of 16 blobs per block. 4096 * 32 bytes * 16 per block = 2 MiB (One mebibyte equals 1.048576 megabytes) per block maximum. The blob cap per block can start low and grow over multiple network upgrades. Because validators and clients still have to download full blob contents, data bandwidth in proto-danksharding is targeted to 1 MB per slot. 
+> #### **What Are Blobs (Binary Large Objects)?**
+> Binary Large Objects (blobs) are a temporary store of data. Although new to the Ethereum network, blobs are already common in computer science. You can see them across programming languages like Javascript and Python.
+
+Proto-danksharding introduces a new transaction type called “blob-carrying transactions - Blob Transaction”
 
 ##### Blob Transaction 
 
