@@ -75,7 +75,7 @@ Blobs are 4096 field-elements of 32 bytes each, with a long term maximum of 16 b
 
 Proto-danksharding introduces a new transaction type called “blob-carrying transactions - Blob Transaction”
 
-##### Blob Transaction 
+#### Blob Transaction 
 
 The new type of EIP-2718 transaction, “blob transaction”, where the TransactionType is `BLOB_TX_TYPE` = `Bytes1(0x03)`. The fields `chain_id`, `nonce`, `max_priority_fee_per_gas`, `max_fee_per_gas`, `gas_limit`, `value`, `data`, and `access_list` follow the same semantics as EIP-1559.
 
