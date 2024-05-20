@@ -8,6 +8,7 @@ The implementations planned as part of Danksharding are:
 * Merged Free Markets
 * Data Availability Sampling
 * Blob Transaction
+* Multi Dimensional Fee Market
 
 These implementations are required to be in consensus-layer, and does not require any additional work from execution client.
 
@@ -15,6 +16,7 @@ These implementations are required to be in consensus-layer, and does not requir
 > [!info]
 > #### Sharding before Danksharding
 > Sharding is splitting up the Ethereum blockchain so that subsets of validators are only responsible for a fraction of the total data. This was originally intended to be the way for Ethereum to scale. However, layer 2 rollups have developed much faster than expected and have provided a lot of scaling already, and will provide much more after Proto-Danksharding is implemented. This means "shard chains" are no longer needed and have been dropped from the roadmap.
+
 
 > [!info]
 > #### Why does Danksharding require Proposer Builder Seperation?
@@ -32,7 +34,7 @@ Proto-Danksharding, also known as [EIP-4844(opens in a new tab)](https://eips.e
 > The name comes from the two researchers who proposed the idea: Protolambda and Dankrad Feist. Checkout conversation b/w Vitalik, Protolambda and Dankrad about Danksharding 
 > https://www.youtube.com/watch?v=N5p0TB77flM
 
-The main feature introduced by proto-danksharding is new transaction type, which we call a **blob-carrying transaction**. Before this, rollups had been limited in how cheap they can make user transactions by the fact that they post their transactions in `CALLDATA`.
+EIP-4844 introduces two main components to the Ethereum protocol: (1) a new transaction format for “blob-carrying transactions” and (2) a new _data gas_ fee market used to price this type of transactions. Before this, rollups had been limited in how cheap they can make user transactions by the fact that they post their transactions in `CALLDATA`.
 
 Cons of CALLDATA:
 * Data passed as CALLDATA lives on chain forever even though they are required only for a short period during fraud proof. 
@@ -82,3 +84,11 @@ For blob transaction, the TransactionType is `BLOB_TX_TYPE` = `Bytes1(0x03)`.
 The field `max_fee_per_blob_gas` is a `uint256` and the field `blob_versioned_hashes` represents a list of hash outputs from`kzg_to_versioned_hash`.
 
 ![table](../media/blobTx.png)
+
+---
+
+#### Multidimensional Fee Market
+
+We essentially have a **dual market for transactions with standard transactions using the one-dimensional (1559) mechanism and blob transactions using the two-dimensional (1559 x 4844) mechanism**. This distinction is important because users can decide to use any of the two transaction types and there will be relevant interactions between the two markets.
+
+ it is important to note that this is only a partial unbundling of the data resource. Standard transactions are still priced as before, with standard conversions for calldata of 16 gas units per byte and 4 units per empty byte. Only blob transactions use both markets with their EVM operations being priced in standard gas and their blob data being priced in data gas.
