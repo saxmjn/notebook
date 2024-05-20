@@ -65,19 +65,19 @@ EIP-4488 did this with two simple rules:
 
 ---
 
-#### Blobs
+#### Blob Transaction 
 
-Blobs are 4096 field-elements of 32 bytes each, with a long term maximum of 16 blobs per block. 4096 * 32 bytes * 16 per block = 2 MiB (One mebibyte equals 1.048576 megabytes) per block maximum. The blob cap per block can start low and grow over multiple network upgrades. Because validators and clients still have to download full blob contents, data bandwidth in proto-danksharding is targeted to 1 MB per slot. 
+Proto-danksharding introduces a new transaction type called “blob-carrying transactions - Blob Transaction”
 
 > [!info]
 > #### **What Are Blobs (Binary Large Objects)?**
 > Binary Large Objects (blobs) are a temporary store of data. Although new to the Ethereum network, blobs are already common in computer science. You can see them across programming languages like Javascript and Python.
+> 
+> Blobs are 4096 field-elements of 32 bytes each, with a long term maximum of 16 blobs per block. 4096 * 32 bytes * 16 per block = 2 MiB (One mebibyte equals 1.048576 megabytes) per block maximum. The blob cap per block can start low and grow over multiple network upgrades. Because validators and clients still have to download full blob contents, data bandwidth in proto-danksharding is targeted to 1 MB per slot. 
 
-Proto-danksharding introduces a new transaction type called “blob-carrying transactions - Blob Transaction”
+The new type of EIP-2718 transaction, “blob transaction”, essentially carry a validity proof which allows the Ethereum chain to verify their authenticity without reading the blob itself.
 
-#### Blob Transaction 
-
-The new type of EIP-2718 transaction, “blob transaction”, where the TransactionType is `BLOB_TX_TYPE` = `Bytes1(0x03)`. The fields `chain_id`, `nonce`, `max_priority_fee_per_gas`, `max_fee_per_gas`, `gas_limit`, `value`, `data`, and `access_list` follow the same semantics as EIP-1559.
+For blob transaction, the TransactionType is `BLOB_TX_TYPE` = `Bytes1(0x03)`. The fields `chain_id`, `nonce`, `max_priority_fee_per_gas`, `max_fee_per_gas`, `gas_limit`, `value`, `data`, and `access_list` follow the same semantics as EIP-1559.
 
 The field `max_fee_per_blob_gas` is a `uint256` and the field `blob_versioned_hashes` represents a list of hash outputs from`kzg_to_versioned_hash`.
 
