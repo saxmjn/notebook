@@ -1,15 +1,30 @@
 
 ## Danksharding: EIP-4488 and EIP-4844
 
-Danksharding is the full realization of the rollup scaling. Danksharding turns Ethereum into a unified settlement and data availability layer. It was introduced as a part of Ethereum's rollup centric roadmap in 2020. 
+Danksharding is the full realization of the rollup scaling for Ethereum, turning it into a unified settlement and data availability layer. It was introduced as a part of Ethereum's rollup centric roadmap in 2020. 
+
+The implementations planned as part of Danksharding are:
+* PBS (proposer/builder separation), to avoid requiring individual validators to process 32 MB of data in one slot.
+* Merged Free Markets
+* Data Availability Sampling
+* Blob Transaction
+
+These implementations are required to be in consensus-layer, and does not require any additional work from execution client.
+
 
 > [!info]
 > #### Sharding before Danksharding
 > Sharding is splitting up the Ethereum blockchain so that subsets of validators are only responsible for a fraction of the total data. This was originally intended to be the way for Ethereum to scale. However, layer 2 rollups have developed much faster than expected and have provided a lot of scaling already, and will provide much more after Proto-Danksharding is implemented. This means "shard chains" are no longer needed and have been dropped from the roadmap.
 
+> [!info]
+> #### Why does Danksharding require Proposer Builder Seperation?
+> 
+> Proposer-builder separation is required to prevent individual validators from having to generate expensive commitments and proofs for 32MB of blob data. This would put too much strain on home stakers and require them to invest in more powerful hardware, which hurts decentralization. Instead, specialized block builders take responsibility for this expensive computational work. Then, they make their blocks available to block proposers to broadcast. The block proposer simply chooses the block that is most profitable. Anyone can verify the blobs cheaply and quickly, meaning any normal validator can check that the block builders are behaving honestly. This allows the large blobs to be processed without sacrificing decentralization. Misbehaving block builders could simply be ejected from the network and slashed - others will step into their place because block building is a profitable activity.
+
 
 ---
 ### EIP-4844 : Proto-Danksharding
+
 Proto-Danksharding, also known as [EIP-4844(opens in a new tab)](https://eips.ethereum.org/EIPS/eip-4844), is a way for [rollups](https://ethereum.org/en/layer-2/#rollups) to add cheaper data to blocks. It is an intermediately step to make txns on L2s cheaper and scale ethereum for > 100,000 tps. 
 
 > [!Info]
@@ -35,7 +50,7 @@ Pros for BlobData:
 ---
 ### EIP-4488
 
-Before EIP-4844 there was another proposed attempt called EIP-4488. The purpose of EIP-4488 was to greatly decreases the gas cost of transaction CALLDATA and simultaneously caps total transaction CALLDATA in a block.
+Before EIP-4844 there was another simpler attempt called EIP-4488. The purpose of EIP-4488 was to greatly decreases the gas cost of transaction CALLDATA and simultaneously caps total transaction CALLDATA in a block.
 
 EIP-4488 did this with two simple rules:
 
