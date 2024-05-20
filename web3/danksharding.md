@@ -1,5 +1,5 @@
 
-## Danksharding: EIP-4488 and EIP-4844
+## Danksharding, EIP-4488 and EIP-4844
 
 Danksharding is the full realization of the rollup scaling for Ethereum, turning it into a unified settlement and data availability layer. It was introduced as a part of Ethereum's rollup centric roadmap in 2020. 
 
