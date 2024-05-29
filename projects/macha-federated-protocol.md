@@ -12,3 +12,5 @@ We're building an infrastructure that access social data from protocols and proj
 Accessing different social data of multiple protocols on any blockchain network is difficult due to its nature and data structure which is fragmented and scattered on different chains and P2P Networks. Published content either on-chain or off-chain using IPFS and Arweave becomes siloed to a particular environment and is not openly discoverable to many users on the network.
 
 Hence even though the blockchain and P2P data are public, there are a lot of blockers before the public can access this data. So it needs re-engineering for the future of the internet.
+
+And with further advancements in the layer2 scaling solutions and the modular architecture there are likely be an ecosystem of *app-chains*. 
