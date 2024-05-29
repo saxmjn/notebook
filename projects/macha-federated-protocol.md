@@ -7,6 +7,7 @@ Macha is building a Federated Network for Social Layers with a mission to bring 
 We're building an infrastructure that access social data from protocols and projects like Lens, Farcaster, Zora, Poap and ENS and many more. Built with its own data nodes network, Macha is developed to fetch, and index data from blockchains and abstract the data making it accessible and searchable to various applications through Macha Network.
 
 
+
 ### Problems in Distributed Social Layers
 
 Accessing different social data of multiple protocols on any blockchain network is difficult due to its nature and data structure which is fragmented and scattered on different chains and P2P Networks. Published content either on-chain or off-chain using IPFS and Arweave becomes siloed to a particular environment and is not openly discoverable to many users on the network.
