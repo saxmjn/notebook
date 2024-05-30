@@ -77,8 +77,6 @@ A  Relay Hub, is a node that maps content identifiers (CIDs) to records of who h
 Relay Hubs receives request for a data and uses relaying mechanism (PUB/SUB relays) to talk to Data Hubs to collect data and return it back to the request initiator. 
 
 
----
-
 
 ---
 ## Consensus
