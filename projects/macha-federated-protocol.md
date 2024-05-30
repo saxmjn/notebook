@@ -67,7 +67,7 @@ But each node to participate in the network requires to stake in the network to 
 
 Also Data Nodes only maintain a temporary record of data and communicate this information to Storage Hubs to record data as per the storage deals.
 
-#### Storage Hub
+### Storage Hub
 Data Hubs are distributed network of storage servers that validate and store data indexed via Network Nodes. Each Hub could stores a data from multiple data sources which can be accessed over an API.
 
 ### Relay Hub
