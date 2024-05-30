@@ -32,6 +32,7 @@ Imagine a potential of the network which has indexed social data from all the pr
 
 A federated network for the social layers will allow each actors to publish their live data to nodes under the same structured format and governed by the same consensus framework.
 
+---
 ### Architecture
 Macha architecture is modular and is sufficiently decentralised in nature with actions are store on chain while data is indexed and stored in a distributed network of nodes and hubs respectively. 
 
