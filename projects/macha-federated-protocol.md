@@ -58,20 +58,23 @@ A 'Registry' is the primary directory of the global state of Macha Protocol.
 
 
 
-### Relay Registry Contract
+#### Relay Registry Contract
 
 
-#### Node
+#### Data Node
 
 A node in Macha network is responsible for reading data from various blockchains and sending it to the Macha consensus protocol for validation. Anyone can run a node and join the network.
 
 But each node to participate in the network requires to stake in the network to ensure the security and participate in reward acquiral/slashing mechanism. 
 
-#### Data Hub
+#### Storage Hub
 Data Hubs are distributed network of storage servers that validate and store data indexed via Network Nodes. Each Hub could stores a data from multiple data sources which can be accessed over an API.
 
 #### Relay Hub
-Relay Hubs receives request for a data and uses relaying mechanism to talk to Data Hubs to collect data and return it back to the request initiator. 
+
+A  Relay Hub, is a node that maps content identifiers (CIDs) to records of who has the data and how to retrieve that data. Because the Macha protocol can index and stores so much data, clients can’t perform efficient retrieval without proper indexing. Relay Hubs work like a specialized key-value indexers for efficient retrieval of content-addressed data.
+
+Relay Hubs receives request for a data and uses relaying mechanism (PUB/SUB relays) to talk to Data Hubs to collect data and return it back to the request initiator. 
 
 
 ---
