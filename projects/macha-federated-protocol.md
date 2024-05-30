@@ -87,4 +87,4 @@ Relay Hubs receives request for a data and uses relaying mechanism (PUB/SUB rela
 
 -----
 
-### Staking
+## Economics
