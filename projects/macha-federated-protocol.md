@@ -14,4 +14,9 @@ Accessing different social data of multiple protocols on any blockchain network 
 
 Hence even though the blockchain and P2P data are public, there are a lot of blockers before the public can access this data. So it needs re-engineering for the future of the internet.
 
-And with further advancements in the layer2 scaling solutions and the modular architecture there are likely be an ecosystem of *app-chains*. 
+And with further advancements in the layer2 scaling solutions and the modular architecture there are likely be an ecosystem of *app-chains*. Which means there will be more fragmentation and bad user experience in utilizing assets and performing actions across the ecosystems. 
+
+
+### Architecture
+Macha architecture is modular and it is sufficiently decentralised in nature with actions are store on chain while data is store in a distributed network of nodes. 
+
