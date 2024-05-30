@@ -59,12 +59,18 @@ MID and CIDs are critical for a distributed system like Macha Protocol, where we
 A node in Macha network is responsible for reading data from various blockchains and sending it to the Macha consensus protocol for validation. Anyone can run a node and join the network.
 
 But each node to participate in the network requires to stake in the network to ensure the security and participate in reward acquiral/slashing mechanism. 
-#### Network Staking
-
 
 #### Data Hubs
 Data Hubs are distributed network of storage servers that validate and store data indexed via Network Nodes. Each Hub could stores a data from multiple data sources which can be accessed over an API.
 
 
-
 #### Relay Engine
+
+---
+
+### Networking
+
+-----
+
+
+### Staking
