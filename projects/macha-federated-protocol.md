@@ -1,5 +1,4 @@
 
-
 ## Macha Federated Protocol
 
 Macha is building a Federated Network for Social Layers with a mission to bring decentralized social content from **blockchains and P2P ecosystem** together, into a single discovery and distribution layer of new internet.
@@ -34,7 +33,7 @@ A federated network for the social layers will allow each actors to publish thei
 
 ---
 ### Architecture
-Macha architecture is modular and is sufficiently decentralised in nature with actions are store on chain while data is indexed and stored in a distributed network of nodes and hubs respectively. 
+Macha architecture is modular and is sufficiently decentralised in nature with states and actions are store on chain while data is indexed and stored in a distributed network of nodes and hubs respectively. 
 
 The overall architecture of the Macha protocol is illustrated below:
 
@@ -48,29 +47,41 @@ Every Meta Assets also has a ***Content IDentifier*** (CID) which is created usi
 MID and CIDs are critical for a distributed system like Macha Protocol, where we want to be able to store and retrieve data from many places. A user requesting a certain content can ask all the peers it's connected to whether they have a content with a particular hash and, if one of them does, they send back the whole content.
 
 
-#### On chain Contracts
+#### Global Registry Contract
 
-1. Registry Contract
-2. Market Contract
+A 'Registry' is the primary directory of the global state of Macha Protocol. 
 
 
-#### Network Node
+
+
+#### Storage Registry Contract
+
+
+
+### Relay Registry Contract
+
+
+#### Node
 
 A node in Macha network is responsible for reading data from various blockchains and sending it to the Macha consensus protocol for validation. Anyone can run a node and join the network.
 
 But each node to participate in the network requires to stake in the network to ensure the security and participate in reward acquiral/slashing mechanism. 
 
-#### Data Hubs
+#### Data Hub
 Data Hubs are distributed network of storage servers that validate and store data indexed via Network Nodes. Each Hub could stores a data from multiple data sources which can be accessed over an API.
 
+#### Relay Hub
+Relay Hubs receives request for a data and uses relaying mechanism to talk to Data Hubs to collect data and return it back to the request initiator. 
 
-#### Relay Engine
+
+---
+
+### Consensus
 
 ---
 
 ### Networking
 
 -----
-
 
 ### Staking
