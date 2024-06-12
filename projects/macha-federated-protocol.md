@@ -38,6 +38,9 @@ Macha architecture is modular and is sufficiently decentralised in nature with s
 The overall architecture of the Macha protocol is illustrated below:
 
 
+
+
+
 ### Meta Assets
 
 Macha uses **Meta** **Assets** term as a designation to represent an indexed and formatted identity, content and any other data from social layers to the Macha Federated Protocol. These Meta Assets irrespective of their source are structured in a unified metadata format and indexed with their own ***Meta IDentifier*** (MID). 
@@ -47,44 +50,35 @@ Every Meta Assets also has a ***Content IDentifier*** (CID) which is created usi
 MID and CIDs are critical for a distributed system like Macha Protocol, where we want to be able to store and retrieve data from many places. A user requesting a certain content can ask all the peers it's connected to whether they have a content with a particular hash and, if one of them does, they send back the whole content.
 
 
-### Global Registry Contract
+### Contracts
 
+##### Global Registry 
 A 'Registry' is the primary directory of the global state of Macha Protocol. 
 
-
-### Storage Registry Contract
+##### Storage Registry Contract
 This contract allows a anyone to permissionlesly storing data from the Data Nodes
 
 
-### Relay Registry Contract
+##### Relay Registry Contract
 
 
-### Indexer Node
+### Nodes
 
 A node in Macha network is responsible for reading data from various blockchains and sending it to the Macha consensus protocol for validation. Anyone can run a node and join the network.
 
 But each node to participate in the network requires to stake in the network to ensure the security and participate in reward acquiral/slashing mechanism. 
 
-Also Data Nodes only maintain a temporary record of data and communicate this information to Storage Hubs to record data as per the storage deals.
+Also Indexer Nodes only maintain a temporary record of data and communicate this information to Storage Hubs to record data as per the storage deals.
 
-### Storage Hub
+
+### Hubs
+
+Hubs are servers that stores and relay data for a longer period and operates storage deals with partners. Hubs are classified as Storage Hub and Relay Hub but both the kinds also work 
+#### Storage Hub
 Storage Hubs are distributed network of storage servers that validate and store data indexed via Network Nodes. Each Hub could stores a data from multiple data sources which can be accessed over an API.
 
-### Relay Hub
+#### Relay Hub
 
 A  Relay Hub, is a node that maps content identifiers (CIDs) to records of who has the data and how to retrieve that data. Because the Macha protocol can index and stores so much data, clients can’t perform efficient retrieval without proper indexing. Relay Hubs work like a specialized key-value indexers for efficient retrieval of content-addressed data.
 
 Relay Hubs receives request for a data and uses relaying mechanism (PUB/SUB relays) to talk to Data Hubs to collect data and return it back to the request initiator. 
-
-
-
----
-## Consensus
-
----
-
-## Networking
-
------
-
-## Economics
