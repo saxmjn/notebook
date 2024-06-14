@@ -1,12 +1,19 @@
 
-#### Designing Token
+### Designing Token
 
 [Work tokens](https://x.com/ViktorBunin/status/1785000852375109848) are created with objective faults in mind. They are typically provided to those that offer some specialized service to a network and also grant the ability to punish adversarial members. Currently, one primary model for work tokens is specialized objective work tokens. These tokens can only be used for a limited scope of tasks, and the completion or neglect of the task above must be [attributable](https://x.com/ViktorBunin/status/1785000852375109848) onchain. For example, ETH is allotted to those who validate or delegate to secure the network. It also grants the ability to punish adversarial members via slashing if they submit invalid transactions.
 
+### Liquidity
 
+* Maximum supply: the maximum number of tokens that can ever exist
+* Total supply: the total number of tokens that have been created
+* Circulating supply: the tokens currently available for trading
+
+---
+### Distribution
 
 #### Airdrop Mechanism
-Designing an effective airdrop mechanism is challenging and almost an art form. Key considerations include: 
+Designing an effective airdrop mechanism is challenging and almost an art form. Key considerations should include: 
 • Who to reward 
 • The value attributed to their efforts 
 • When and how to distribute rewards
