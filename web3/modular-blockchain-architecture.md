@@ -1,4 +1,6 @@
 
+# Modular Blockchain Architecture
+
 Actions
 * Execute Transactions
 * Consensus on order and validity of txn
