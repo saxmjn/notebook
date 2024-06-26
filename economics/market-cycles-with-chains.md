@@ -13,11 +13,9 @@ Over last three yrs we have seen Fantom summer, Solana summer, Polygon summer, A
 
 We have also seen the major setbacks like FTX Collapse but it becomes necessary
 
-Thus it becomes critical to dive int
+Thus it becomes critical to dive into ecnomics of chains and rollups to understand 
 
 By exploring bridge activity, and the evolution of TVL, gas fees, the number of users, transactions, and volume across chains, L1 proving and publishing costs, we will be able to find outliers and patterns and benefit to the .
-
-Also positioning your network 
 
 ### Understanding the L1 and L2 Networks
 
