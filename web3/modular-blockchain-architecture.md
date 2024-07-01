@@ -1,7 +1,14 @@
 
 # Modular Blockchain Architecture
 
+### Concepts
 
+* Monolithic Vs Modular
+* Scalability with Rollups
+* Aggregation: AggLayer and Superchain
+* Interoperability
+
+---
 ### Monolithic Vs Modular
 
 * **Rigid Mechanics:** Monolithic architecture refers to a system in which all of a network’s operational functions are integrated in a single protocol, followed by all operators. This includes executing transactions, coming to consensus on their order and validity, and storing the state of the chain.
@@ -19,13 +26,6 @@ The idea of a modular blockchain is that it can specialize in a couple of functi
 - **Settlement:** Dispute resolution and bridge (optional).
 - **Consensus:** Order transactions.
 - **Data availability:** Ensure data is available.
----
-###
-
-* Scalability: Rollups
-* Aggregation: AggLayer and Superchain
-* Interoperability
-
 
 ----
 ### What are Rollups?
@@ -57,8 +57,7 @@ Rollups range from general-purpose execution environments (e.g., [OP Mainnet](h
 | ---------- | ------------------ |
 | **ZK**     | zkSync, Starkware  |
 
-
-##### Core Concepts of Rollups
+##### Functions of Rollups
 
 ###### Execution Layer
 * Full nodes processes new transactions from 
@@ -74,6 +73,11 @@ Rollups range from general-purpose execution environments (e.g., [OP Mainnet](h
 >Limitation of Sequencer in zk based rollup like Starknet
 >
 >https://community.starknet.io/t/starknet-escape-hatch-research/1108
+
+
+| Shared Sequencers | Astria, Espresso |
+| ----------------- | ---------------- |
+
 
 ###### Proof Verification Layer
 ###### Data Availability Layer
