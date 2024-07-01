@@ -7,6 +7,7 @@
 * Scalability with Rollups
 * Aggregation: AggLayer and Superchain
 * Interoperability
+* Value Accrual
 
 ---
 ### Monolithic Vs Modular
@@ -35,7 +36,6 @@ Rollups are layer 2 scaling solutions where processing of transactions happens o
 * General Purpose Rollups
 * App Specific Rollups
 * Sovereign Rollups
-
 
 | RaaS | Gelato, Caldera, Conduit, AltLayer  |
 | ---- | ---------------------------------- |
@@ -82,7 +82,6 @@ Rollups range from general-purpose execution environments (e.g., [OP Mainnet](h
 
 | Shared Sequencers | Astria, Espresso, Radius, Fireblock |
 | ----------------- | ----------------------------------- |
-
 
 ###### Proof Verification Layer
 ###### Data Availability Layer
