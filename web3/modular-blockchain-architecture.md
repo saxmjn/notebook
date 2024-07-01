@@ -36,6 +36,11 @@ Rollups are layer 2 scaling solutions where processing of transactions happens o
 * App Specific Rollups
 * Sovereign Rollups
 
+
+| RaaS | Gelato, Caldera, Conduit, AltLayer  |
+| ---- | ---------------------------------- |
+
+
 ##### Types of Rollups Frameworks
 Rollups range from general-purpose execution environments (e.g., [OP Mainnet](https://www.optimism.io/) and [zkSync Era](https://zksync.io/)) to app-specific rollups that host single applications.
 
@@ -75,8 +80,8 @@ Rollups range from general-purpose execution environments (e.g., [OP Mainnet](h
 >https://community.starknet.io/t/starknet-escape-hatch-research/1108
 
 
-| Shared Sequencers | Astria, Espresso |
-| ----------------- | ---------------- |
+| Shared Sequencers | Astria, Espresso, Radius, Fireblock |
+| ----------------- | ----------------------------------- |
 
 
 ###### Proof Verification Layer
