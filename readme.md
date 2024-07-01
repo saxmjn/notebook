@@ -8,5 +8,6 @@ Macha is building a Federated Network for Social Layers with a mission to bring 
 #### [Danksharding: Steps towards Ethereum rollup centric roadmap](https://github.com/saxmjn/notebook/blob/main/web3/danksharding.md)
 Danksharding is the full realization of the rollup scaling for Ethereum, turning it into a unified settlement and data availability layer. It was introduced as a part of Ethereum's rollup centric roadmap in 2020. 
 
-
+#### [Modular Architecture and Interoperability of Rollups](https://github.com/saxmjn/notebook/blob/main/web3/modular-blockchain-architecture.md)
+A collection of thoughts and concepts understanding the micro service architecture of the rollup stacks like sequencers, provers, DA layers and verification on settlement layer.
 
