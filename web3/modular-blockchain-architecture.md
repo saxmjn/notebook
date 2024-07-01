@@ -13,6 +13,7 @@
 | Monolithic | Bitcoin, Solana            |
 | ---------- | -------------------------- |
 | Modular    | Ethereum, Cosmos, Polkadot |
+
 The idea of a modular blockchain is that it can specialize in a couple of functions instead of trying to do everything. The functions that modular blockchains can specialize in are:
 - **Execution:** Process transactions.
 - **Settlement:** Dispute resolution and bridge (optional).
