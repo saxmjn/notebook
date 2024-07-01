@@ -1,4 +1,6 @@
 
+## Token Mechanics: Activation and Distribution
+
 ### Designing Token
 
 [Work tokens](https://x.com/ViktorBunin/status/1785000852375109848) are created with objective faults in mind. They are typically provided to those that offer some specialized service to a network and also grant the ability to punish adversarial members. Currently, one primary model for work tokens is specialized objective work tokens. These tokens can only be used for a limited scope of tasks, and the completion or neglect of the task above must be [attributable](https://x.com/ViktorBunin/status/1785000852375109848) onchain. For example, ETH is allotted to those who validate or delegate to secure the network. It also grants the ability to punish adversarial members via slashing if they submit invalid transactions.
