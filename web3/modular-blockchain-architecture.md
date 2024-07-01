@@ -1,6 +1,17 @@
 
 # Modular Blockchain Architecture
 
+
+### Monolithic Vs Modular
+Monolithic blockchains (especially bitcoin) prioritize security and decentralization over scalability, while modular blockchains were designed with scalability as a priority.
+
+![table](../media/mvsm.avif)
+
+| Monolithic | Bitcoin, Solana            |
+| ---------- | -------------------------- |
+| Modular    | Ethereum, Cosmos, Polkadot |
+
+
 Actions
 * Execute Transactions
 * Consensus on order and validity of txn
