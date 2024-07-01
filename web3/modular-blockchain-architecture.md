@@ -5,8 +5,8 @@
 ### Monolithic Vs Modular
 
 * **Rigid Mechanics:** Monolithic architecture refers to a system in which all of a network’s operational functions are integrated in a single protocol, followed by all operators. This includes executing transactions, coming to consensus on their order and validity, and storing the state of the chain.
-* Security vs Scalability: Monolithic blockchains (especially bitcoin) prioritize security and decentralization over scalability, while modular blockchains were designed with scalability as a priority.
-* Bootstrapping validators: Deploying a new monolithic blockchain requires the overhead of bootstrapping a secure validator set and maintaining a consensus network.
+* **Security vs Scalability:** Monolithic blockchains (especially bitcoin) prioritize security and decentralization over scalability, while modular blockchains were designed with scalability as a priority.
+* **Bootstrapping validators:** Deploying a new monolithic blockchain requires the overhead of bootstrapping a secure validator set and maintaining a consensus network.
 
 ![table](../media/mvsm.avif)
 
@@ -19,16 +19,29 @@ The idea of a modular blockchain is that it can specialize in a couple of functi
 - **Settlement:** Dispute resolution and bridge (optional).
 - **Consensus:** Order transactions.
 - **Data availability:** Ensure data is available.
+---
+###
 
+* Scalability: Rollups
+* Aggregation: AggLayer and Superchain
+* Interoperability
+
+
+----
 ### What are Rollups?
 Rollups are layer 2 scaling solutions where processing of transactions happens offchain but their proof or transaction data is settled on settlement layer like Ethereum. 
 
-##### Types of Rollups
+##### Types of Rollups Architectures
+* General Purpose Rollups
+* App Specific Rollups
+* Sovereign Rollups
+
+##### Types of Rollups Frameworks
 Rollups range from general-purpose execution environments (e.g., [OP Mainnet](https://www.optimism.io/) and [zkSync Era](https://zksync.io/)) to app-specific rollups that host single applications.
 
 ###### Optimistic [[Rollups]]: 
 * Assumes transactions are valid by default and only runs computation, via a **fraud proof**, in the event of a challenge.
-* Optimistic rollups execute transactions outside of Ethereum, but post transaction data to Mainnet as `calldata`. 
+* Optimistic rollups execute transactions outside of Settlement Layer, but post transaction data to Mainnet as `calldata`. 
 * Optimistic rollups also use compression techniques to reduce the amount of data posted on Ethereum.
 * After a rollup batch is submitted on Ethereum, there's a time window (called a challenge period) during which anyone can challenge the results of a rollup transaction by computing a fraud proof.
 ###### ZK Rollups: 
