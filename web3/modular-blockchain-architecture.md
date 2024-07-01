@@ -108,5 +108,7 @@ As rollups can be stacked on top of each other, modular ecosystems can scale up 
 ----
 ##### Sources
 https://www.preethikasireddy.com/post/a-normies-guide-to-rollups
+
 https://ethereum.org/en/developers/docs/scaling/optimistic-rollups/
+
 https://messari.io/report/the-modular-blockchain-landscape?referrer=author:stephanie-dunbar
