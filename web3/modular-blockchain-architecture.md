@@ -3,19 +3,21 @@
 
 
 ### Monolithic Vs Modular
-Monolithic blockchains (especially bitcoin) prioritize security and decentralization over scalability, while modular blockchains were designed with scalability as a priority.
+
+* **Rigid Mechanics:** Monolithic architecture refers to a system in which all of a network’s operational functions are integrated in a single protocol, followed by all operators. This includes executing transactions, coming to consensus on their order and validity, and storing the state of the chain.
+* Security vs Scalability: Monolithic blockchains (especially bitcoin) prioritize security and decentralization over scalability, while modular blockchains were designed with scalability as a priority.
+* Bootstrapping validators: Deploying a new monolithic blockchain requires the overhead of bootstrapping a secure validator set and maintaining a consensus network.
 
 ![table](../media/mvsm.avif)
 
 | Monolithic | Bitcoin, Solana            |
 | ---------- | -------------------------- |
 | Modular    | Ethereum, Cosmos, Polkadot |
-
-
-Actions
-* Execute Transactions
-* Consensus on order and validity of txn
-* Storing state of the chain
+The idea of a modular blockchain is that it can specialize in a couple of functions instead of trying to do everything. The functions that modular blockchains can specialize in are:
+- **Execution:** Process transactions.
+- **Settlement:** Dispute resolution and bridge (optional).
+- **Consensus:** Order transactions.
+- **Data availability:** Ensure data is available.
 
 ### What are Rollups?
 Rollups are layer 2 scaling solutions where processing of transactions happens offchain but their proof or transaction data is settled on settlement layer like Ethereum. 
