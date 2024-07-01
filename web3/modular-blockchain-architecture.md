@@ -72,6 +72,7 @@ Rollups range from general-purpose execution environments (e.g., [OP Mainnet](h
 
 > [!info]
 >Limitation of Sequencer in zk based rollup like Starknet
+>
 >https://community.starknet.io/t/starknet-escape-hatch-research/1108
 
 ###### Proof Verification Layer
