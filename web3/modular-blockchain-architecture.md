@@ -44,11 +44,14 @@ Rollups range from general-purpose execution environments (e.g., [OP Mainnet](h
 * Assumes transactions are valid by default and only runs computation, via a **fraud proof**, in the event of a challenge.
 * Optimistic rollups also use compression techniques to reduce the amount of data posted on Ethereum.
 * After a rollup batch is submitted on Ethereum, there's a time window (called a challenge period) during which anyone can challenge the results of a rollup transaction by computing a fraud proof.
+
+![table](../media/op.png)
 ###### ZK Rollups: 
 * runs computation off-chain and submits a **validity proof** to the main chain. 
 * zk-SNARKs (Zero-Knowledge Succinct Non-Interactive Argument of Knowledge)
 * zk-STARKs (Zero-Knowledge Scalable Transparent ARgument of Knowledge)
 
+![table](../media/zk.png)
 
 | Optimistic | Op, Arbitrum, Boba |
 | ---------- | ------------------ |
