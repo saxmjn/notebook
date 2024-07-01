@@ -10,7 +10,7 @@
 
 ![table](../media/mvsm.avif)
 
-| Monolithic | Bitcoin, Solana            |
+| Monolithic | Bitcoin, Solana, BNB       |
 | ---------- | -------------------------- |
 | Modular    | Ethereum, Cosmos, Polkadot |
 
@@ -39,7 +39,7 @@ Rollups are layer 2 scaling solutions where processing of transactions happens o
 ##### Types of Rollups Frameworks
 Rollups range from general-purpose execution environments (e.g., [OP Mainnet](https://www.optimism.io/) and [zkSync Era](https://zksync.io/)) to app-specific rollups that host single applications.
 
-###### Optimistic [[Rollups]]: 
+###### Optimistic Rollups: 
 * Optimistic rollups execute transactions outside of Settlement Layer, but post transaction data to Mainnet as `calldata`. 
 * Assumes transactions are valid by default and only runs computation, via a **fraud proof**, in the event of a challenge.
 * Optimistic rollups also use compression techniques to reduce the amount of data posted on Ethereum.
@@ -65,8 +65,14 @@ Rollups range from general-purpose execution environments (e.g., [OP Mainnet](h
 * Use of State Transition Function to govern the state change of blockchain with new transactions. 
 
 ###### Sequencer Layer
-* Accepts transactions from users and processes ordering of these transactions
+* **Submission and Ordering:** Accepts transactions from users and processes ordering of these transactions.
+* **Soft Confirmation:** Given the deterministic nature of rollups, it provide soft confirmation of finality to user as its unlikely to have any changes in the confinement of rollup rules.
+* **Block Posting:** On completion of ordering the block/batches is passed to Provers to validate.
+* **Safe Escape Hatch:** For dishonest sequencers, Forced Transaction Escape Hatches can be created at rollup protocol level to enable the txn escape the sequencer and directly be posted to layer 1 
 
+> [!info]
+>Limitation of Sequencer in zk based rollup like Starknet
+>https://community.starknet.io/t/starknet-escape-hatch-research/1108
 
 ###### Proof Verification Layer
 ###### Data Availability Layer
