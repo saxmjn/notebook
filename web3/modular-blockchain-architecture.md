@@ -40,14 +40,19 @@ Rollups are layer 2 scaling solutions where processing of transactions happens o
 Rollups range from general-purpose execution environments (e.g., [OP Mainnet](https://www.optimism.io/) and [zkSync Era](https://zksync.io/)) to app-specific rollups that host single applications.
 
 ###### Optimistic [[Rollups]]: 
-* Assumes transactions are valid by default and only runs computation, via a **fraud proof**, in the event of a challenge.
 * Optimistic rollups execute transactions outside of Settlement Layer, but post transaction data to Mainnet as `calldata`. 
+* Assumes transactions are valid by default and only runs computation, via a **fraud proof**, in the event of a challenge.
 * Optimistic rollups also use compression techniques to reduce the amount of data posted on Ethereum.
 * After a rollup batch is submitted on Ethereum, there's a time window (called a challenge period) during which anyone can challenge the results of a rollup transaction by computing a fraud proof.
 ###### ZK Rollups: 
 * runs computation off-chain and submits a **validity proof** to the main chain. 
 * zk-SNARKs (Zero-Knowledge Succinct Non-Interactive Argument of Knowledge)
 * zk-STARKs (Zero-Knowledge Scalable Transparent ARgument of Knowledge)
+
+
+| Optimistic | Op, Arbitrum, Boba |
+| ---------- | ------------------ |
+| **ZK**     | zkSync, Starkware  |
 
 
 ##### Core Concepts of Rollups
