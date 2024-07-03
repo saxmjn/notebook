@@ -117,8 +117,10 @@ https://eips.ethereum.org/EIPS/eip-4488
 https://eips.ethereum.org/EIPS/eip-4844
 https://www.blocknative.com/blog/eip-4844-blobs-and-blob-gas-what-you-need-to-know#2
 https://ethresear.ch/t/on-block-sizes-gas-limits-and-scalability/18444
+https://ethresear.ch/t/eip-4844-fee-market-analysis/15078
 https://notes.ethereum.org/@dankrad/new_sharding
 https://medium.com/coinmonks/danksharding-a-revolutionary-update-of-the-ethereum-sharding-6b380e56a580
 https://www.youtube.com/watch?v=e9oudTr5BE4
 https://www.alchemy.com/overviews/danksharding
-
+https://dune.com/0xRob/blobs
+https://dune.com/ephema/eip-4844-the-impact-of-blobs
