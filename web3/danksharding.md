@@ -45,6 +45,14 @@ Pros for BlobData:
 * Blobs are extremely large (~125Kb) and much cheaper than CALLDATA as it is not competing for gas. 
 * Data in blobs are temporary and are deleted approximately after 4096 epochs (18days ~ 2eeks)
 
+
+>[!info]
+>Calculation:
+>- 1 epoch = 32 slots * 12 seconds = 384 seconds
+>-  18 epochs = 18 * 384 seconds = 6,912 seconds
+
+
+
 > [!info]
 > ##### Why is it OK to delete Blob Data?
 > Rollups post commitments to their transaction data on-chain and also make the actual data available in data blobs. This means provers can check the commitments are valid or challenge data they think is wrong. At the node-level, the blobs of data are held in the consensus client. The consensus clients attest that they have seen the data and that it has been propagated around the network. If the data was kept forever, these clients would bloat and lead to large hardware requirements for running nodes. Instead, the data is automatically pruned from the node every 18 days. The consensus client attestations demonstrate that there was a sufficient opportunity for provers to verify the data. The actual data can be stored off-chain by rollup operators, users or others.
@@ -79,6 +87,13 @@ Proto-danksharding introduces a new transaction type called “blob-carrying tra
 
 The new type of EIP-2718 transaction, “blob transaction”, essentially carry a validity proof which allows the Ethereum chain to verify their authenticity without reading the blob itself.
 
+Some details about type-3 transactions and blobs:
+
+- Each block can have up to 6 total blobs
+- Each type-3 transaction can have 1 to 6 blobs
+- Each blob stores up to 128kb of data. _If the entire 128kb is not used, the tx sender still pays for 128kb of blob space._
+- Blobs are only required to be stored for 4096 epochs(~ 18 days).  This is considered available long enough for all actors of a L2 to retrieve, but short enough to keep disk use manageable. This allows blobs to be priced cheaper than calldata, which is stored forever
+
 For blob transaction, the TransactionType is `BLOB_TX_TYPE` = `Bytes1(0x03)`. The fields `chain_id`, `nonce`, `max_priority_fee_per_gas`, `max_fee_per_gas`, `gas_limit`, `value`, `data`, and `access_list` follow the same semantics as EIP-1559.
 
 The field `max_fee_per_blob_gas` is a `uint256` and the field `blob_versioned_hashes` represents a list of hash outputs from`kzg_to_versioned_hash`.
@@ -92,3 +107,18 @@ The field `max_fee_per_blob_gas` is a `uint256` and the field `blob_version
 We essentially have a **dual market for transactions with standard transactions using the one-dimensional (1559) mechanism and blob transactions using the two-dimensional (1559 x 4844) mechanism**. This distinction is important because users can decide to use any of the two transaction types and there will be relevant interactions between the two markets.
 
  it is important to note that this is only a partial unbundling of the data resource. Standard transactions are still priced as before, with standard conversions for calldata of 16 gas units per byte and 4 units per empty byte. Only blob transactions use both markets with their EVM operations being priced in standard gas and their blob data being priced in data gas.
+
+---
+
+#### Sources
+https://ethereum.org/en/roadmap/danksharding/
+https://www.eip4844.com/
+https://eips.ethereum.org/EIPS/eip-4488
+https://eips.ethereum.org/EIPS/eip-4844
+https://www.blocknative.com/blog/eip-4844-blobs-and-blob-gas-what-you-need-to-know#2
+https://ethresear.ch/t/on-block-sizes-gas-limits-and-scalability/18444
+https://notes.ethereum.org/@dankrad/new_sharding
+https://medium.com/coinmonks/danksharding-a-revolutionary-update-of-the-ethereum-sharding-6b380e56a580
+https://www.youtube.com/watch?v=e9oudTr5BE4
+https://www.alchemy.com/overviews/danksharding
+

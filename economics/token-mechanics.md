@@ -16,7 +16,7 @@
 
 #### Airdrop Mechanism
 Designing an effective airdrop mechanism is challenging and almost an art form. Key considerations should include: 
-• Who to reward 
+• Who to reward: Allowlist and Blocklist
 • The value attributed to their efforts 
 • When and how to distribute rewards
 
