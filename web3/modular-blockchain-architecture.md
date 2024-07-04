@@ -112,3 +112,9 @@ https://www.preethikasireddy.com/post/a-normies-guide-to-rollups
 https://ethereum.org/en/developers/docs/scaling/optimistic-rollups/
 
 https://messari.io/report/the-modular-blockchain-landscape?referrer=author:stephanie-dunbar
+
+https://variant.fund/articles/app-specific-rollups-trade-off-connectivity-control/
+
+https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698
+
+https://mirror.xyz/electriccap.eth/SD0wT7qSSfis9gLT_Ki1gY6_oTYEqgwcGE0hDw7kMDY
