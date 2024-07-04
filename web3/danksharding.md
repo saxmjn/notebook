@@ -51,11 +51,11 @@ Pros for BlobData:
 >- 1 epoch = 32 slots * 12 seconds = 384 seconds
 >-  18 epochs = 18 * 384 seconds = 6,912 seconds
 
+##### Why is it OK to add 1 MB data to blocks as Blobs that everyone has to download, but not to just make calldata 10x cheaper?
+This has to do with the difference between **average load** and **worst-case load**. Today, we already have a situation where the average block size [is about 90 kB](https://etherscan.io/chart/blocksize) but the theoretical maximum possible block size (if _all_ 30M gas in a block went to calldata) is ~1.8 MB. The Ethereum network has handled blocks approaching the maximum in the past. However, if we simply reduced the calldata gas cost by 10x, then although the _average_ block size would increase to still-acceptable levels, the _worst case_ would become 18 MB, which is far too much for the Ethereum network to handle.
 
-
-> [!info]
-> ##### Why is it OK to delete Blob Data?
-> Rollups post commitments to their transaction data on-chain and also make the actual data available in data blobs. This means provers can check the commitments are valid or challenge data they think is wrong. At the node-level, the blobs of data are held in the consensus client. The consensus clients attest that they have seen the data and that it has been propagated around the network. If the data was kept forever, these clients would bloat and lead to large hardware requirements for running nodes. Instead, the data is automatically pruned from the node every 18 days. The consensus client attestations demonstrate that there was a sufficient opportunity for provers to verify the data. The actual data can be stored off-chain by rollup operators, users or others.
+##### Why is it OK to delete Blob Data?
+Rollups post commitments to their transaction data on-chain and also make the actual data available in data blobs. This means provers can check the commitments are valid or challenge data they think is wrong. At the node-level, the blobs of data are held in the consensus client. The consensus clients attest that they have seen the data and that it has been propagated around the network. If the data was kept forever, these clients would bloat and lead to large hardware requirements for running nodes. Instead, the data is automatically pruned from the node every 18 days. The consensus client attestations demonstrate that there was a sufficient opportunity for provers to verify the data. The actual data can be stored off-chain by rollup operators, users or others.
 
 ---
 ### EIP-4488
@@ -63,7 +63,6 @@ Pros for BlobData:
 Before EIP-4844 there was another simpler attempt called EIP-4488. The purpose of EIP-4488 was to greatly decreases the gas cost of transaction CALLDATA and simultaneously caps total transaction CALLDATA in a block.
 
 EIP-4488 did this with two simple rules:
-
 - Calldata gas cost reduced from 16 gas per byte to 3 gas per byte
 - A limit of 1 MB per block plus an extra 300 bytes per transaction (theoretical max: ~1.4 MB)
 
